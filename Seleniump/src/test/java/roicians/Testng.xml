@@ -1,0 +1,13 @@
+<suite name="TestNg Roicians">
+	<test name="Regression" allow-return-values="true">
+		<classes>
+			<class name="roicians.Testnew" />
+			
+		</classes>
+	</test>
+	<test name="Smoke" allow-return-values="true">
+		<classes>
+			<class name="roicians.TestSelenium" />
+		</classes>
+	</test>
+</suite>

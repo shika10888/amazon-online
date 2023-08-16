@@ -1,0 +1,27 @@
+package roicians;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class Mousehover {
+
+	public static void main(String[] args) {
+		//step 1 to open the browser
+				System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+				
+				
+				WebDriver driver=new ChromeDriver();
+				
+				//step 2 open contact us
+				driver.get("https://www.roicians.com/");
+				Actions action=new Actions(driver);
+action.moveToElement(driver.findElement(By.cssSelector("#premium-nav-menu-item-65 > a"))).build().perform();
+				
+				driver.findElement(By.linkText("SOFTWARE TESTING")).click();
+				//driver.findElement(By.partialLinkText("SOFTW"));
+				
+	}
+
+}

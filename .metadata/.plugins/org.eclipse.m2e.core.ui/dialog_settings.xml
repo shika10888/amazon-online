@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\alvin\eclipse-workspace\Hello world\src\com\shika\Mealplan.java"/>
+			<item value="C:\Users\alvin\eclipse-workspace\Rest\src\test\java\apiTest\Auth.java"/>
+			<item value="C:\Users\alvin\eclipse-workspace\Seleniump\src\test\java\roicians\Career.java"/>
+			<item value="C:\Users\alvin\eclipse-workspace\Seleniump"/>
+			<item value="C:\Users\alvin\eclipse-workspace\walmart 1\src\login\Child.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="CucumberEcommerce"/>
+			<item value="RestAPI"/>
+			<item value="HR"/>
+			<item value="BDD1"/>
+			<item value="BDD"/>
+			<item value="Automation"/>
+			<item value="Amazon"/>
+			<item value="SeleniumProject"/>
+		</list>
+		<list key="name">
+			<item value="Shopping"/>
+			<item value="Api"/>
+			<item value="API"/>
+			<item value="HR Management Project"/>
+			<item value="PROJECT1"/>
+			<item value="Project"/>
+			<item value="WebApplication"/>
+			<item value="Webbased"/>
+			<item value="Practice"/>
+		</list>
+		<list key="artifactId">
+			<item value="CucumberNew"/>
+			<item value="RestApi"/>
+			<item value="Rest"/>
+			<item value="HRManagement"/>
+			<item value="CUCUMBER1"/>
+			<item value="Cucumber"/>
+			<item value="Amazon"/>
+			<item value="Automation"/>
+			<item value="Automateweb"/>
+			<item value="Seleniump"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

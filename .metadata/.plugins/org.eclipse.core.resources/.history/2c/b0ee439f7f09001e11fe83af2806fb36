@@ -1,0 +1,30 @@
+package roicians;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Contactus {
+
+	public static void main(String[] args) {
+
+		//step 1 to open the browser
+		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		
+		
+		WebDriver driver=new ChromeDriver();
+		
+		//step 2 open contact us
+		driver.get("https://www.roicians.com/contact-us/");
+	driver.findElement(By.id("text-77525447616")).sendKeys("Emily");
+		
+	driver.findElement(By.id("text-95374915097")).sendKeys("Shika");	
+	driver.findElement(By.id("text-27022866830")).sendKeys("shika10888@gmail.com" );
+	driver.findElement(By.id("field-tIgxvmTMez6ibt1")).sendKeys("6473456787");
+	driver.findElement(By.id("field-kJfKGbPLNi5yFI7")).sendKeys("Hi");
+	driver.findElement(By.id("button-18782068913")).click();
+
+	
+	}
+
+}

@@ -1,0 +1,27 @@
+package stepdefinitionnew;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class Remember {
+	@Given("User must be on Homepage URL\"https:\\/\\/demo.applitools.com\\/\"")
+	public void user_must_be_on_homepage_url_https_demo_applitools_com() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User clicks on Remember me checkbox")
+	public void user_clicks_on_remember_me_checkbox() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Remember me checkbox must be selected.")
+	public void remember_me_checkbox_must_be_selected() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+}

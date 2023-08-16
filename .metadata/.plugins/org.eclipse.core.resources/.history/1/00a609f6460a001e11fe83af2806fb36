@@ -1,0 +1,26 @@
+package roicians;
+
+import java.io.File;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Screenshot {
+
+	public static void main(String[] args) {
+
+		//step 1 to open the browser
+				System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+				
+				
+				WebDriver driver=new ChromeDriver();
+				
+				//step 2 open Roicians page
+				driver.get("https://www.roicians.com/");
+				File srcfile=((TakeScreenshot)driver).getScreenShotAs(OutputType.FILE);
+				FileUtils.copyFile(srcfile,new File("D://screenshot.jpg"));
+				
+	}
+
+}

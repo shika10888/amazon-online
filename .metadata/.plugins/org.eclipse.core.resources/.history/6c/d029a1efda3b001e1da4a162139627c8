@@ -1,0 +1,61 @@
+package stepdef;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+
+public class Shoppingcart {
+	WebDriver driver= new ChromeDriver();
+	@Given("User must enter any keyword or partial item text.")
+	public void user_must_enter_any_keyword_or_partial_item_text() {
+		System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+		driver.get("https://www.amazon.ca/");
+		Actions actions= new Actions(driver);
+		   actions.moveToElement(driver.findElement(By.cssSelector("#nav-link-accountList"))).build().perform();
+		   driver.findElement(By.className("nav-action-inner")).click();
+		   WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(60));
+	       wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ap_email\"]"))).isDisplayed();
+		   driver.findElement(By.xpath("//*[@id=\"ap_email\"]")).sendKeys("shika10888+1@gmail.com");
+		   driver.findElement(By.id("continue")).click();
+		   driver.findElement(By.id("ap_password")).sendKeys("abcdef");
+		   driver.findElement(By.id("signInSubmit")).click();
+		   driver.findElement(By.id("twotabsearchtextbox")).sendKeys("women handbags");
+		  
+			driver.findElement(By.xpath("//*[@id=\"nav-search-submit-button\"]")).click();
+			driver.manage().window().maximize();
+	}
+
+	@When("Select any item and add it to cart")
+	public void select_any_item_and_add_it_to_cart() {
+	
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(60));
+	       wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("s-image"))).isDisplayed();
+	    driver.findElement(By.cssSelector("#search > div.s-desktop-width-max.s-desktop-content.s-wide-grid-style-t1.s-opposite-dir.s-wide-grid-style.sg-row > div.sg-col-20-of-24.s-matching-dir.sg-col-16-of-20.sg-col.sg-col-8-of-12.sg-col-12-of-16 > div > span.rush-component.s-latency-cf-section > div.s-main-slot.s-result-list.s-search-results.sg-row > div:nth-child(7) > div > div > div > div > div > div > div.s-product-image-container.aok-relative.s-text-center.s-image-overlay-grey.puis-image-overlay-grey.s-padding-left-small.s-padding-right-small.puis-spacing-small.s-height-equalized.puis.puis-v2x6wtqv5na4492f8vtnbmmr0ma > div > span > a > div")).click();
+	    WebDriverWait wait1=new WebDriverWait(driver, Duration.ofSeconds(60));
+	       wait1.until(ExpectedConditions.visibilityOfElementLocated(By.id("add-to-cart-button"))).isDisplayed();
+	    driver.findElement(By.id("add-to-cart-button")).click();
+	}
+
+	@Then("The cart must be updated with the added items.")
+	public void the_cart_must_be_updated_with_the_added_items() throws InterruptedException {
+	    
+	    driver.findElement(By.id("nav-cart-count")).click();
+	    Thread.sleep(30);
+	    driver.findElement(By.className("sc-list-item-content")).isDisplayed();
+	    
+	   
+	}
+
+
+
+}
