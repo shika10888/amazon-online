@@ -16,7 +16,7 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
+@signed_in
 Feature: Login & Security
   
   Scenario: Checking for the functionality of Login & Security 

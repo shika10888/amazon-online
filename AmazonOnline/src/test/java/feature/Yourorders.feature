@@ -16,7 +16,7 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
+@signed_in
 Feature: Your Orders
   
   Scenario: Checking for the functionality of Your Orders

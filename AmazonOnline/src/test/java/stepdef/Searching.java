@@ -12,20 +12,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import testrunner.DriverUtil;
 
 public class Searching {
-	WebDriver driver = new ChromeDriver();
+	WebDriver driver = DriverUtil.getDriver();
 	@Given("User must be on User Homepage")
 	public void user_must_be_on_user_homepage() {
-		System.setProperty("webdriver.chrome.driver","chromedriver.exe");
-		driver.get("https://www.amazon.ca/");
-		Actions actions= new Actions(driver);
-		   actions.moveToElement(driver.findElement(By.cssSelector("#nav-link-accountList"))).build().perform();
-		   driver.findElement(By.className("nav-action-inner")).click();
-		   driver.findElement(By.xpath("//*[@id=\"ap_email\"]")).sendKeys("shika10888+1@gmail.com");
-		   driver.findElement(By.id("continue")).click();
-		   driver.findElement(By.id("ap_password")).sendKeys("abcdef");
-		   driver.findElement(By.id("signInSubmit")).click();
+		//System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+		
 	}
 
 	@When("User enters any keyword")

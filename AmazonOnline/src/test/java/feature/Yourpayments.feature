@@ -16,7 +16,7 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
+@signed_in
 Feature:Your Payments
   @tag1
   Scenario: Checking for the functionality of Your Payments

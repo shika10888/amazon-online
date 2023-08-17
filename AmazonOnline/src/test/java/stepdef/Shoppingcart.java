@@ -12,25 +12,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import testrunner.DriverUtil;
 
 
 public class Shoppingcart {
-	WebDriver driver= new ChromeDriver();
+	WebDriver driver= DriverUtil.getDriver();
 	@Given("User must enter any keyword or partial item text.Click on search button")
 	public void user_must_enter_any_keyword_or_partial_item_text_click_on_search_button() {
-	    
-	
-		System.setProperty("webdriver.chrome.driver","chromedriver.exe");
-		driver.get("https://www.amazon.ca/");
-		Actions actions= new Actions(driver);
-		   actions.moveToElement(driver.findElement(By.cssSelector("#nav-link-accountList"))).build().perform();
-		   driver.findElement(By.className("nav-action-inner")).click();
-		   WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(60));
-	       wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ap_email\"]"))).isDisplayed();
-		   driver.findElement(By.xpath("//*[@id=\"ap_email\"]")).sendKeys("shika10888+1@gmail.com");
-		   driver.findElement(By.id("continue")).click();
-		   driver.findElement(By.id("ap_password")).sendKeys("abcdef");
-		   driver.findElement(By.id("signInSubmit")).click();
 		   driver.findElement(By.id("twotabsearchtextbox")).sendKeys("women handbags");
 		   driver.manage().window().maximize();
 		   WebDriverWait wait2=new WebDriverWait(driver, Duration.ofSeconds(60));

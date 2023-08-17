@@ -44,6 +44,7 @@ public class Signin {
 	@Then("click on Sign in Button")
 	public void click_on_sign_in_button() {
 		driver.findElement(By.id("signInSubmit")).click();
+		
 	}
 
 

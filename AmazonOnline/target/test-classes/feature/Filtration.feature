@@ -16,7 +16,7 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
+@signed_in
 Feature: Filtration
   
   Scenario: Checking for the functionality of Filtration 

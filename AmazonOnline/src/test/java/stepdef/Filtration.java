@@ -1,36 +1,25 @@
 package stepdef;
 
+import static org.junit.Assert.assertTrue;
 import java.time.Duration;
 import java.util.NoSuchElementException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.junit.CucumberOptions;
+import testrunner.DriverUtil;
 
 public class Filtration {
-	WebDriver driver = new ChromeDriver();
+	WebDriver driver = DriverUtil.getDriver();
 	@Given("User must enter any keyword.Click on search button")
 	public void user_must_enter_any_keyword_click_on_search_button() {
-		System.setProperty("webdriver.chrome.driver","chromedriver.exe");
-		driver.get("https://www.amazon.ca/");
-		Actions actions= new Actions(driver);
-		   actions.moveToElement(driver.findElement(By.cssSelector("#nav-link-accountList"))).build().perform();
-		   driver.findElement(By.className("nav-action-inner")).click();
-		   WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(60));
-	       wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ap_email\"]"))).isDisplayed();
-		   driver.findElement(By.xpath("//*[@id=\"ap_email\"]")).sendKeys("shika10888+1@gmail.com");
-		   driver.findElement(By.id("continue")).click();
-		   driver.findElement(By.id("ap_password")).sendKeys("abcdef");
-		   driver.findElement(By.id("signInSubmit")).click();
+		//System.setProperty("webdriver.chrome.driver","chromedriver.exe");
 		   driver.findElement(By.id("twotabsearchtextbox")).sendKeys("women handbags");
 			driver.findElement(By.id("nav-search-submit-button")).click();
 	}
@@ -43,16 +32,13 @@ public class Filtration {
 	    WebDriverWait wait1=new WebDriverWait(driver, Duration.ofSeconds(60));
 	       wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"p_36/12035762011\"]/span/a/span"))).isDisplayed();
 	    driver.findElement(By.xpath("//*[@id=\"p_36/12035762011\"]/span/a/span")).click();
+    WebDriverWait wait2=new WebDriverWait(driver, Duration.ofSeconds(10));
+	       wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"p_72/11192170011\"]/span/a/section/i"))).isDisplayed();
 	}
 
 	@Then("Items must be displayed according to the filter applied.")
 	public void items_must_be_displayed_according_to_the_filter_applied() {
-		Wait<WebDriver> wait2=new FluentWait<WebDriver>(driver)
-				.withTimeout(Duration.ofSeconds(60))
-				.pollingEvery(Duration.ofMillis(10))
-				.ignoring(NoSuchElementException.class);
-
-				wait2.until((ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#search > div.s-desktop-width-max.s-desktop-content.s-wide-grid-style-t1.s-opposite-dir.s-wide-grid-style.sg-row"))));
+			assertTrue(driver.findElement(By.xpath("//*[@id=\"p_72/11192170011\"]/span/a/section/span")).getAttribute("class").contains("a-text-bold"));
 	}
-
+		
 }
