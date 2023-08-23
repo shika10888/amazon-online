@@ -2,24 +2,20 @@ package stepdef;
 
 import static org.junit.Assert.assertTrue;
 import java.time.Duration;
-import java.util.NoSuchElementException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.junit.CucumberOptions;
 import testrunner.DriverUtil;
 
 public class Filtration {
 	WebDriver driver = DriverUtil.getDriver();
 	@Given("User must enter any keyword.Click on search button")
 	public void user_must_enter_any_keyword_click_on_search_button() {
-		//System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+		
 		   driver.findElement(By.id("twotabsearchtextbox")).sendKeys("women handbags");
 			driver.findElement(By.id("nav-search-submit-button")).click();
 	}
